@@ -168,3 +168,30 @@ class _FormPageState extends State<FormPage> {
                     ),
                   ],
                 ),
+                const SizedBox(height: 10,),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextFormField(
+                        controller: taskController,
+                        decoration: InputDecoration(
+                          labelText: "First Task",
+                          hintText: "Enter your First Task",
+                          hintStyle: TextStyle(color: Colors.grey), 
+                          border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                          borderSide: BorderSide(color: Colors.grey), 
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(4),
+                          borderSide: BorderSide(color: customColor, width: 2), 
+                        ),
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty){
+                            return "Please enter some text";
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
