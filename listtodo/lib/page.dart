@@ -45,3 +45,10 @@ class _FormPageState extends State<FormPage> {
                       decoration: TextDecoration.none
                     ),
                   ),
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: const Icon(Icons.close, size: 25,)
+                  )
+                ],
+              ),
+            ),
