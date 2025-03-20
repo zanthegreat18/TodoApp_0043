@@ -128,3 +128,37 @@ class _FormPageState extends State<FormPage> {
       );
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Form Page'),
+        centerTitle: true,
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Form(
+            key: formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text("Task Date:"),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                       Text(selectedDate != null
+                       ? DateFormat('dd-MM-yyyy HH:mm').format(selectedDate!)
+                            : "Select a date"
+                            ),
+                            if (!isDateValid)
+                            const Text(
+                              "Please select a date",
+                              style: TextStyle(color: Colors.red),
+                            )
+                      ],
+                    ),
