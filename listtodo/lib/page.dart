@@ -76,3 +76,26 @@ class _FormPageState extends State<FormPage> {
                         borderRadius: BorderRadius.circular(8)
                     )
                   ),
+                  onPressed: (){
+                    setState(() {
+                      selectedDate ??= DateTime.now();
+                      isDateValid = true;
+                    });
+                    Navigator.of(context).pop();
+                  }, 
+                  child: const Text(
+                    "Select",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white
+                    ),
+                  )
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
