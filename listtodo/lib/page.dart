@@ -7,3 +7,11 @@ class FormPage extends StatefulWidget {
   @override
   State<FormPage> createState() => _FormPageState();
 }
+
+class _FormPageState extends State<FormPage> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController taskController = TextEditingController();
+  final List<Map<String, dynamic>> tasks = [];
+  DateTime? selectedDate;
+  bool isDateValid = true;
+  final Color customColor = Colors.deepPurple[400]!;
