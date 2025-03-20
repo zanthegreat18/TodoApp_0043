@@ -195,3 +195,13 @@ class _FormPageState extends State<FormPage> {
                         },
                       ),
                     ),
+                    const SizedBox(width:10),
+                    FilledButton(
+                      onPressed: addTask,
+                      style: FilledButton.styleFrom(
+                        backgroundColor: customColor
+                      ),
+                      child: const Text("Submit"),
+                    )
+                  ],
+                ),
