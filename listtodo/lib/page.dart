@@ -222,3 +222,10 @@ class _FormPageState extends State<FormPage> {
                             task["title"],
                             style: const TextStyle(fontWeight: FontWeight.bold),
                           ),
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Deadline: ${DateFormat('dd-MM-yyyy HH:mm').format(task["deadline"])}",
+                                style: const TextStyle(color: Colors.grey),
+                              ),
