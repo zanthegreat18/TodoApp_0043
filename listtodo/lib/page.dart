@@ -15,3 +15,16 @@ class _FormPageState extends State<FormPage> {
   DateTime? selectedDate;
   bool isDateValid = true;
   final Color customColor = Colors.deepPurple[400]!;
+
+  void showDateTimePicker() {
+    showCupertinoModalPopup(
+      context: context,
+      builder: (_) => Container(
+        height: 300,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
+        ),
