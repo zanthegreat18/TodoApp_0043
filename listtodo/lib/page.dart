@@ -237,3 +237,10 @@ class _FormPageState extends State<FormPage> {
                               ),
                             ]
                           ),
+                          trailing: Checkbox(
+                            value: task["done"],
+                            onChanged: (value) {
+                              setState(() {
+                                tasks[index]["done"] = value;
+                              });
+                            },
