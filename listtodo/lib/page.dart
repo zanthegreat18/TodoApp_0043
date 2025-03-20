@@ -244,3 +244,24 @@ class _FormPageState extends State<FormPage> {
                                 tasks[index]["done"] = value;
                               });
                             },
+                            fillColor: WidgetStateProperty.resolveWith((states) {
+                            if (states.contains(WidgetState.selected)) {
+                              return customColor; 
+                            }
+                            return Colors.white; 
+                          }),
+                          checkColor: Colors.white, 
+                          )
+                        ),
+                      ); 
+                    },
+                  )
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
