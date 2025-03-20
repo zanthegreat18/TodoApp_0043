@@ -28,3 +28,20 @@ class _FormPageState extends State<FormPage> {
             topRight: Radius.circular(30),
           ),
         ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    "Set Task Date & Time",
+                    style: TextStyle(
+                      fontFamily: "Montserrat",
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                      decoration: TextDecoration.none
+                    ),
+                  ),
