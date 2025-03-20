@@ -229,3 +229,11 @@ class _FormPageState extends State<FormPage> {
                                 "Deadline: ${DateFormat('dd-MM-yyyy HH:mm').format(task["deadline"])}",
                                 style: const TextStyle(color: Colors.grey),
                               ),
+                              Text(
+                                task["done"] ? "Done" : "Not Done",
+                                style: TextStyle(
+                                  color: task["done"] ? Colors.green : Colors.red,
+                                ),
+                              ),
+                            ]
+                          ),
